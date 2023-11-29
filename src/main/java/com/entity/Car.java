@@ -29,7 +29,7 @@ public class Car {
 	private Double price;
 
 	@ManyToOne
-	@JoinColumn(name = "vatNumber", nullable = false)
+	@JoinColumn(name = "vatNumber")
 	private Dealership dealership;
 
 	// Insert
