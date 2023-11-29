@@ -29,7 +29,7 @@ public class Dealership {
 	private Integer dealershipId;
 
 	@Pattern(regexp = "^[A-Z]{2}\\d{9}$", message = "Formato non corretto!")
-	@Column(name = "vat_number", unique = true)
+	@Column(name = "vat_number", unique = true, nullable = false)
 	private String vatNumber;
 
 	private String name;
