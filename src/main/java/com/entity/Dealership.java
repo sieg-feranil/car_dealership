@@ -5,7 +5,6 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Pattern;
@@ -24,7 +23,7 @@ public class Dealership {
 
 	@Id
 	@Pattern(regexp = "^[A-Z]{2}\\d{9}$", message = "Formato non corretto!")
-	@Column(name = "vat_number", unique = true, nullable = false)
+	@Column(name = "vat_number", unique = true)
 	private String vatNumber;
 
 	private String name;
@@ -33,7 +32,7 @@ public class Dealership {
 
 	private String city;
 
-	@OneToMany(mappedBy = "dealership", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "dealership")// , fetch = FetchType.EAGER)
 	List<Car> cars = new ArrayList<>();
 
 	// Insert | Update

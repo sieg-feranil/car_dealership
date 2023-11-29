@@ -15,7 +15,10 @@ public interface CarDealershipService {
 	 * @param cars
 	 * @return Map<Dealership, List<Car>>
 	 */
-	Map<Dealership, List<Car>> insertCarsDealership(Dealership dealership, List<Car> cars);
+	Map<Dealership, List<Car>> insertCarsDealership(Map<Dealership, List<Car>> carsDealership);
+
+	// Test
+	Map<Dealership, List<Car>> insertCarsDealership2(Dealership dealership);
 
 	/**
 	 * Aggiorna della lista cars del dealership
